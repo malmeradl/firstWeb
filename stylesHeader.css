@@ -1,0 +1,160 @@
+/* Общие стили */
+html {
+  height: 100%;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.contact-text {
+  margin: 0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для header */
+
+header {
+
+  background-color: #ffffff;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.left-links {
+  margin-left: 15px;
+}
+
+nav a p {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.white-button {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: gray;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.white-button:hover {
+  background-color: #e2e2e2;
+}
+
+
+.black-button {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.black-button:hover {
+  background-color: #404040;
+}
+
+.login-form,
+.registration-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-form label,
+.registration-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.registration-form input[type="text"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.login-form button,
+.registration-form button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}

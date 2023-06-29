@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HOUSE BUY - О нас</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesHeader.css">
+  <link rel="stylesheet" type="text/css" href="stylesAboutUs.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="left-links" href="index.html">
+        <p>HOUSE BUY</p>
+      </a>
+      <div class="right-lincs">
+        <a href="main.html">объекты</a>
+        <a href="#">история</a>
+        <a href="about.html">о нас</a>
+        <a href="contact.html">контакты</a>
+        <button class="white-button" onclick="showLoginForm()">войти</button>
+        <button class="black-button" onclick="showRegistrationForm()">зарегистрироваться</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="registration-form">
+    <h2>Регистрация</h2>
+    <span class="close-button" onclick="closeRegistrationForm()">&#10006;</span>
+
+    <label for="username">Имя пользователя:</label>
+    <input type="text" id="username" placeholder="Введите имя пользователя" required>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" placeholder="Введите пароль" required>
+
+    <button onclick="register()">Зарегистрироваться</button>
+  </div>
+
+  <div class="login-form">
+    <h2>Вход</h2>
+    <span class="close-button" onclick="closeLoginForm()">&#10006;</span>
+
+    <label for="login-username">Имя пользователя:</label>
+    <input type="text" id="login-username" placeholder="Введите имя пользователя" required>
+
+    <label for="login-password">Пароль:</label>
+    <input type="password" id="login-password" placeholder="Введите пароль" required>
+
+    <button onclick="login()">Войти</button>
+  </div>
+
+
+  <div class="main-section">
+    <div class="info">
+    <div class="about-section">
+      <h2>О чем наш сайт?</h2>
+      <p>HOUSE BUY - это сайт, где вы можете посмотреть самые последние новости по вопросу недвижимости в Беларуси.Также вы можете приобрести нужную и важную покупку и найти то, что вы искали в этой сфере.</p>
+    </div>
+    <div class="about-section">
+      <h2>О нас</h2>
+      <p>Ответ прост - мы те, кто с радостью поможет вам для верного и правильного решения. Мы расскажем и покажем все, что касается вашего пожелания в вопросе недвижимости и ее приобретения. Дадим советы и надеемся, что они вам помогут.</p>
+    </div>
+  </div>
+    <div class="company-name">
+      <h1>HOUSE BUY</h1>
+      <p1>HOUSE BUY - здесь все, что вам нужно</p1>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

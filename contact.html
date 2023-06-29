@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HOUSE BUY - О нас</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesHeader.css">
+  <link rel="stylesheet" type="text/css" href="stylesContact.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="left-links" href="index.html">
+        <p>HOUSE BUY</p>
+      </a>
+      <div class="right-lincs">
+        <a href="main.html">объекты</a>
+        <a href="#">история</a>
+        <a href="about.html">о нас</a>
+        <a href="contact.html">контакты</a>
+        <button class="white-button" onclick="showLoginForm()">войти</button>
+        <button class="black-button" onclick="showRegistrationForm()">зарегистрироваться</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="registration-form">
+    <h2>Регистрация</h2>
+    <span class="close-button" onclick="closeRegistrationForm()">&#10006;</span>
+
+    <label for="username">Имя пользователя:</label>
+    <input type="text" id="username" placeholder="Введите имя пользователя" required>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" placeholder="Введите пароль" required>
+
+    <button onclick="register()">Зарегистрироваться</button>
+  </div>
+
+  <div class="login-form">
+    <h2>Вход</h2>
+    <span class="close-button" onclick="closeLoginForm()">&#10006;</span>
+
+    <label for="login-username">Имя пользователя:</label>
+    <input type="text" id="login-username" placeholder="Введите имя пользователя" required>
+
+    <label for="login-password">Пароль:</label>
+    <input type="password" id="login-password" placeholder="Введите пароль" required>
+
+    <button onclick="login()">Войти</button>
+  </div>
+
+
+  <div class="main-section">
+    <div class="info">
+
+      <h2>Это обратная связь</h2>
+      <p>Здесь вы можете написать нам о проблемах, которые настигли вас на нашем сайте. Мы обязательно ответим на ваше
+        письмо и постараемся вам помочь.</p>
+    </div>
+    <div class="feedback-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Электронная почта:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Текст сообщения:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-column">
+      <h4>Ваш аккаунт</h4>
+      <a href="#" onclick="showLoginForm()">Войти</a>
+      <a href="#" onclick="showRegistrationForm()">Регистрация</a>
+    </div>
+    <div class="footer-column">
+      <h4>Разделы</h4>
+      <a href="main.html">Объекты</a>
+      <a href="#">История</a>
+    </div>
+    <div class="footer-column">
+      <h4>Информация</h4>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </div>
+    <img src="icons/email.jpg" alt="stejnsofia52@gmail.com" class="emailImage">
+    <div class="footer-icons">
+
+      <img src="icons/phone.jpg" alt="+375(44)540-82-12" class="img">
+      <img src="icons/vk.jpg" alt="https//vk.com/id434008748" class="img">
+      <img src="icons/inst.jpg" alt="_shtein_sofa_" class="img">
+    </div>
+  </footer>
+</body>
+
+</html>

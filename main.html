@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>House Buy - objects</title>
+  <link rel="stylesheet" type="text/css" href="stylesMain.css">
+  <link rel="stylesheet" type="text/css" href="stylesHeader.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="left-links" href="index.html">
+        <p>HOUSE BUY</p>
+      </a>
+      <div class="right-lincs">
+        <a href="main.html">объекты</a>
+        <a href="#">история</a>
+        <a href="about.html">о нас</a>
+        <a href="contact.html">контакты</a>
+        <button class="white-button" onclick="showLoginForm()">войти</button>
+        <button class="black-button" onclick="showRegistrationForm()">зарегистрироваться</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="registration-form">
+    <h2>Регистрация</h2>
+    <span class="close-button" onclick="closeRegistrationForm()">&#10006;</span>
+
+    <label for="username">Имя пользователя:</label>
+    <input type="text" id="username" placeholder="Введите имя пользователя" required>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" placeholder="Введите пароль" required>
+
+    <button onclick="register()">Зарегистрироваться</button>
+  </div>
+
+  <div class="login-form">
+    <h2>Вход</h2>
+    <span class="close-button" onclick="closeLoginForm()">&#10006;</span>
+
+    <label for="login-username">Имя пользователя:</label>
+    <input type="text" id="login-username" placeholder="Введите имя пользователя" required>
+
+    <label for="login-password">Пароль:</label>
+    <input type="password" id="login-password" placeholder="Введите пароль" required>
+
+    <button onclick="login()">Войти</button>
+  </div>
+
+ <a href="#" id="scrollToTopButton"><img src="icons/scroll.png" alt="Scroll To Top"></a>
+
+
+  <section class="filters">
+    <h2>Найди свою недвижимость по категориям</h2>
+    <div class="checkbox-container">
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" data-category="apartment">
+        <div class="checkbox-box"></div>
+        <img src="icons/flat.png" alt="Квартира" class="checkbox-image">
+        <span class="checkbox-text"> Квартиры</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" data-category="house">
+        <div class="checkbox-box"></div>
+        <img src="icons/house.png" alt="Дом" class="checkbox-image">
+        <span class="checkbox-text">Дома</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" data-category="land">
+        <div class="checkbox-box"></div>
+        <img src="icons/region.png" alt="Участок" class="checkbox-image">
+        <span class="checkbox-text">Участки</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" data-category="room">
+        <div class="checkbox-box"></div>
+        <img src="icons/room.png" alt="Комната" class="checkbox-image">
+        <span class="checkbox-text">Комнаты</span>
+      </label>
+      <button class="searchButton" onclick="filterObjects()">Поиск</button>
+    </div>
+
+  </section>
+
+
+
+
+  <section class="objects">
+    <h2>Все объекты</h2>
+    <div class="filteredObjects">
+      <!-- Пример объекта категории "Квартиры" -->
+      <div class="object-category apartment">
+        <div class="object-image">
+          <!-- Изображение квартиры -->
+          <img src="images/flat.jpg" alt="Квартира">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Набережная г. Витебск</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>1</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>62</span>
+          </div>
+          <div class="object-price">82 550 руб. ~ 28 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category apartment">
+        <div class="object-image">
+          <!-- Изображение квартиры -->
+          <img src="images/flat2.jpg" alt="Квартира">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Маяковская г. Минск</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>3</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>76</span>
+          </div>
+          <div class="object-price">134 235 руб. ~ 45 00 $;</div>
+        </div>
+      </div>
+
+      <div class="object-category apartment">
+        <div class="object-image">
+          <!-- Изображение квартиры -->
+          <img src="images/flat3.jpg" alt="Квартира">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Набережная г. Витебск</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>2</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>58</span>
+          </div>
+          <div class="object-price">87 235 руб. ~ 30 500 $</div>
+        </div>
+      </div>
+
+      <div class="object-category apartment">
+        <div class="object-image">
+          <!-- Изображение квартиры -->
+          <img src="images/flat4.jpg" alt="Квартира">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Набережная г. Речица</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>2</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>70</span>
+          </div>
+          <div class="object-price">65 200 руб. ~ 22 000 $</div>
+        </div>
+      </div>
+
+      <!-- Пример объекта категории "Дома" -->
+      <div class="object-category house">
+        <div class="object-image">
+          <!-- Изображение дома -->
+          <img src="images/house1.jpg" alt="Дом">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Пешеходная г. Витебск</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>4</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>3</span>
+            <img src="icons/m2.jpg" alt="Жилая площадь">
+            <span>жилая- 76.6</span>
+            <img src="icons/m2.jpg" alt="Общая площадь">
+            <span>общая-192.7</span>
+          </div>
+          <div class="object-price">447 450 руб. ~ 150 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category house">
+        <div class="object-image">
+          <!-- Изображение дома -->
+          <img src="images/house2.jpg" alt="Дом">
+        </div>
+        <div class="object-info">
+          <div class="object-address">ул. Ленина, 46 Верхнедвинский р-н,Витебская область</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>2</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Жилая площадь">
+            <span>жилая- 35.9</span>
+            <img src="icons/m2.jpg" alt="Общая площадь">
+            <span>общая-55.7</span>
+          </div>
+          <div class="object-price">14 915 руб. ~ 5 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category house">
+        <div class="object-image">
+          <!-- Изображение дома -->
+          <img src="images/house3.jpg" alt="Дом">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Минская область, Минский р-нд, Раубичипер Озерный, 14</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>3</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>2</span>
+            <img src="icons/m2.jpg" alt="Жилая площадь">
+            <span>жилая- 88.5</span>
+            <img src="icons/m2.jpg" alt="Общая площадь">
+            <span>общая- 111.1</span>
+          </div>
+          <div class="object-price">1 190 217 руб. ~ 399 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category house">
+        <div class="object-image">
+          <!-- Изображение дома -->
+          <img src="images/house4.jpg" alt="Дом">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Минская область Логойский р-н д. Марковщина ул. Нагородная</div>
+          <div class="object-rooms">
+            <img src="icons/bed.jpg" alt="Комнаты">
+            <span>3</span>
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>2</span>
+            <img src="icons/m2.jpg" alt="Жилая площадь">
+            <span>жилая- 87.5</span>
+            <img src="icons/m2.jpg" alt="Общая площадь">
+            <span>общая- 272</span>
+          </div>
+          <div class="object-price">1 759 970 руб. ~ 590 000 $</div>
+        </div>
+      </div>
+
+      <!-- Пример объекта категории "Участки" -->
+      <div class="object-category land">
+        <div class="object-image">
+          <!-- Изображение участка -->
+          <img src="images/region1.jpg" alt="Участок">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Витебская область Браславский р-н д. Вязки</div>
+          <div class="object-area">20 сот</div>
+          <div class="object-price">53 694 руб. ~ 18 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category land">
+        <div class="object-image">
+          <!-- Изображение участка -->
+          <img src="images/region2.jpg" alt="Участок">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Витебская область Городокский р-н д. Мариампольпер. Полевой, 60</div>
+          <div class="object-area">2 сот</div>
+          <div class="object-price">31 322 руб. ~ 10 500 $</div>
+        </div>
+      </div>
+
+      <div class="object-category land">
+        <div class="object-image">
+          <!-- Изображение участка -->
+          <img src="images/region3.jpg" alt="Участок">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Минская область Минский р-н д. Рахманьки ул. Центральная</div>
+          <div class="object-area">14 сот</div>
+          <div class="object-price">86 507 руб.  ~ 29 000 $</div>
+        </div>
+      </div>
+
+      <div class="object-category land">
+        <div class="object-image">
+          <!-- Изображение участка -->
+          <img src="images/region4.jpg" alt="Участок">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Минская область Дзержинский р-н</div>
+          <div class="object-area">10.22 сот</div>
+          <div class="object-price">29 830 руб. ~ 10 000 $</div>
+        </div>
+      </div>
+
+      <!-- Пример объекта категории "Комнаты" -->
+
+      <div class="object-category room">
+        <div class="object-image">
+          <!-- Изображение комнаты -->
+          <img src="images/room1.jpg" alt="Комната">
+        </div>
+        <div class="object-info">
+          <div class="object-address">г. Минск ул. Корженевского, 10.2</div>
+          <div class="object-features">
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>37.7</span>
+          </div>
+          <div class="object-price">61 748 руб. ~ 20 700 $</div>
+        </div>
+      </div>
+
+      <div class="object-category room">
+        <div class="object-image">
+          <!-- Изображение комнаты -->
+          <img src="images/room2.jpg" alt="Комната">
+        </div>
+        <div class="object-info">
+          <div class="object-address">г. Минск, ул. Горбатова, 38</div>
+          <div class="object-features">
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>18.7</span>
+          </div>
+          <div class="object-price">61 135 руб. ~ 21 500 $</div>
+        </div>
+      </div>
+
+      <div class="object-category room">
+        <div class="object-image">
+          <!-- Изображение комнаты -->
+          <img src="images/room3.jpg" alt="Комната">
+        </div>
+        <div class="object-info">
+          <div class="object-address">Г. Минск, ул. Калиновского, 56</div>
+          <div class="object-features">
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>17.2</span>
+          </div>
+          <div class="object-price">67 118 руб. ~ 22 500 $</div>
+        </div>
+      </div>
+
+      <div class="object-category room">
+        <div class="object-image">
+          <!-- Изображение комнаты -->
+          <img src="images/room4.jpg" alt="Комната">
+        </div>
+        <div class="object-info">
+          <div class="object-address">г. Минск, ул. Хоружей, 42</div>
+          <div class="object-features">
+            <img src="icons/bath.jpg" alt="Ванны">
+            <span>1</span>
+            <img src="icons/m2.jpg" alt="Площадь">
+            <span>13.96</span>
+          </div>
+          <div class="object-price">50 711 руб. ~ 17 000 $</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-item">
+        <img src="icons/email.jpg" alt="Email Icon" class="icon-email">
+        <div class="contact-details">
+          <p class="contact-label">Почта</p>
+          <p class="contact-info">stejnsofia52@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <img src="icons/phone.jpg" alt="Phone Icon" class="icon">
+        <div class="contact-details">
+          <p class="contact-label">Телефон, Telegram</p>
+          <p class="contact-info">+375(44)540-82-12</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <img src="icons/vk.jpg" alt="VK Icon" class="icon">
+        <div class="contact-details">
+          <p class="contact-label">Вконтакте</p>
+          <p class="contact-info">https//vk.com/id434008748</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <img src="icons/inst.jpg" alt="Instagram Icon" class="icon">
+        <div class="contact-details">
+          <p class="contact-label">Instagram</p>
+          <p class="contact-info">_shtein_sofa_</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
